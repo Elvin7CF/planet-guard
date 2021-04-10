@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>星球守卫战</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+    }
+    .gameover {
+      background-color: red;
+      opacity: 0.3;
+    }
+  </style>
+</head>
+<body>
+  <div class="fixed text-white text-sm ml-2 mt-2 select-none" style="display: none;" id="scoreModal">得分: <span id="scoreEl">0</span></div>
+
+  <div class="fixed inset-0 flex items-center justify-center" id="modalEl">
+    <div class="bg-white max-w-md w-full p-6 text-center" style="border-radius: 8px;">
+      <p class="text-sm text-gray-700">本轮得分</p>
+      <h1 class="text-4xl font-bold mb-4" id="bigScoreEl">0</h1>
+      <div>
+        <button class="bg-blue-500 text-white w-full py-3 rounded-full texts" id="startGameBtn">开始游戏</button>
+      </div>
+    </div>
+  </div>
+
+  <canvas></canvas>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
